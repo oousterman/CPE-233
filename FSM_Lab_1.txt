@@ -1,0 +1,152 @@
+----------------------------------------------------------------------------------
+-- Company: Cal Poly CPE 133
+-- Engineer: Cole Cummins, Oliver Ousterman
+-- 
+-- Create Date: 05/21/2017 08:03:50 PM
+-- Design Name: 
+-- Module Name: FSM_CNTR - Behavioral
+-- Project Name: 
+-- Target Devices: 
+-- Tool Versions: 
+-- Description: A 4 bit full feature counter that uses a state machine as its count, having options to count only odd and even numbers, 
+-- the ability to hold and reset, and count both down and up
+-- Dependencies: 
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+-- 
+----------------------------------------------------------------------------------
+
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity FSM_CNTR is
+    Port ( BTN, RCO0,RCO1, GT, CLK : in STD_LOGIC;
+	   LD0, LD1, CSEL, EN0, EN1, WE, CL : out STD_LOGIC;
+           RSEL: out STD_LOGIC_VECTOR (2 downto 0));
+end FSM_CNTR;
+
+architecture Behavioral of FSM_CNTR is
+    type state_type is (ST0,ST1,ST2,ST3,ST4,ST5,ST6);
+    signal PS, NS : state_type;
+begin
+    
+    --Reset and holding--
+    process(CLK, NS)
+    begin
+        if (rising_edge(CLK)) then
+            PS <= NS;
+        end if;
+    end process;
+    
+    --State descriptions--
+    process(PS, BTN, RCO0,RCO1, GT)
+    begin
+        case PS is 
+            when ST0 =>
+                if BTN = '0' then
+                    CSEL <= '1';
+		    RSEL <= '00';
+		    WE <= '0';
+		    LD0 , LD1, EN0, EN1, CL <= '0';
+                else
+                    if EVEN = '1' then NS <= ST6;
+                    else NS <= ST7;
+                    end if;
+                end if;
+                
+            when ST1 =>
+                if UP = '1' then
+                    if ODD = '1' then NS <= ST3;
+                    else NS <= ST2;
+                    end if;
+                else
+                    if ODD = '1' then NS <= ST7;
+                    else NS <= ST0;
+                    end if;
+                end if;
+                
+            when ST2 =>
+                if UP = '1' then
+                    if EVEN = '1' then NS <= ST4;
+                    else NS <= ST3;
+                    end if;
+                else
+                    if EVEN = '1' then NS <= ST0;
+                    else NS <= ST1;
+                    end if;
+                end if;
+
+            when ST3 =>
+                if UP = '1' then
+                    if ODD = '1' then NS <= ST5;
+                    else NS <= ST4;
+                    end if;
+                else
+                    if ODD = '1' then NS <= ST1;
+                    else NS <= ST2;
+                    end if;
+                end if;
+
+            when ST4 =>
+                if UP = '1' then
+                    if EVEN = '1' then NS <= ST6;
+                    else NS <= ST5;
+                    end if;
+                else
+                    if EVEN = '1' then NS <= ST2;
+                    else NS <= ST3;
+                    end if;
+                end if;
+
+            when ST5 =>
+                if UP = '1' then
+                    if ODD = '1' then NS <= ST7;
+                    else NS <= ST6;
+                    end if;
+                else
+                    if ODD = '1' then NS <= ST3;
+                    else NS <= ST4;
+                    end if;
+                end if;
+
+            when ST6 =>
+                if UP = '1' then
+                    if EVEN = '1' then NS <= ST0;
+                    else NS <= ST7;
+                    end if;
+                else
+                    if EVEN = '1' then NS <= ST4;
+                    else NS <= ST5;
+                    end if;
+                end if;
+
+            when ST7 =>
+                if UP = '1' then
+                    if ODD = '1' then NS <= ST1;
+                    else NS <= ST0;
+                    end if;
+                else
+                    if ODD = '1' then NS <= ST5;
+                    else NS <= ST6;
+                    end if;
+                end if;
+            when others =>
+                NS <= ST0;
+        end case;
+    end process;
+    
+    with PS select
+        COUNT <= "000" when ST0,
+                 "001" when ST1,
+                 "010" when ST2,
+                 "011" when ST3,
+                 "100" when ST4,
+                 "101" when ST5,
+                 "110" when ST6,
+                 "111" when ST7,
+                 "000" when others;
+  
+end Behavioral;
