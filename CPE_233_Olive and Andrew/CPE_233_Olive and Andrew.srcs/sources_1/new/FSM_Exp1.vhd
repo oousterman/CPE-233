@@ -1,9 +1,9 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 entity FSM_Exp1 is 
-    port ( BTN, RCO0,RCO1, GT, CLK : in  std_logic; 
-           RSEL : out std_logic_vector(1 downto 0); 
-           LD0, LD1, CSEL, EN0, EN1, WE, CL : out std_logic);  
+    port ( BTN, RCO0,RCO1, GT, CLK : in  STD_LOGIC; 
+           RSEL : out STD_LOGIC_VECTOR(1 downto 0); 
+           LD0, CSEL, LD1, EN0, EN1, WE, CL : out STD_LOGIC);  
 end FSM_Exp1;
 architecture Behavioral of FSM_Exp1 is
    type state_type is (ST0,ST1,ST2,ST3,ST4,ST5,ST6); 

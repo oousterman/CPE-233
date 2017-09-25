@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Product Version: Vivado v2017.1 (64-bit)              -->
+<!-- Product Version: Vivado v2017.2 (64-bit)              -->
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="20" Path="C:/Users/aferg/OneDrive/Documents/GitHub/CPE-233/CPE_233_Olive and Andrew/CPE_233_Olive and Andrew.xpr">
+<Project Version="7" Minor="20" Path="C:/Users/oousterm/Documents/GitHub/CPE-233/CPE_233_Olive and Andrew/CPE_233_Olive and Andrew.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="c138533ffcaa46b0a7ea7a066f3a3f3c"/>
@@ -115,6 +115,13 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/FSM_Exp1.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/sseg_dec_uni.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
