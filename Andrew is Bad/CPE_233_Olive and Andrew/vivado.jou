@@ -1,0 +1,121 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Sep 26 09:36:07 2017
+# Process ID: 9104
+# Current directory: C:/Users/oousterm/Documents/GitHub/CPE-233/Andrew is Bad/CPE_233_Olive and Andrew
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15640 C:\Users\oousterm\Documents\GitHub\CPE-233\Andrew is Bad\CPE_233_Olive and Andrew\CPE_233_Olive and Andrew.xpr
+# Log file: C:/Users/oousterm/Documents/GitHub/CPE-233/Andrew is Bad/CPE_233_Olive and Andrew/vivado.log
+# Journal file: C:/Users/oousterm/Documents/GitHub/CPE-233/Andrew is Bad/CPE_233_Olive and Andrew\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/oousterm/Documents/GitHub/CPE-233/Andrew is Bad/CPE_233_Olive and Andrew/CPE_233_Olive and Andrew.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source Exp1_Main.tcl
+add_force {/Exp1_Main/BTN_IN} -radix hex {0 0ns}
+add_force {/Exp1_Main/BTN_IN} -radix hex {1 0ns}
+close_sim
+launch_simulation
+source Exp1_Main.tcl
+add_force {/Exp1_Main/BTN_IN} -radix hex {0 0ns}
+add_force {/Exp1_Main/clk} -radix hex {0 0ns} {1 50000ps} -repeat_every 100000ps
+run all
+run 10 us
+add_force {/Exp1_Main/BTN_IN} -radix hex {1 0ns}
+run 10 us
+close_sim
+launch_simulation
+source Exp1_Main.tcl
+add_force {/Exp1_Main/BTN_IN} -radix hex {0 0ns}
+add_force {/Exp1_Main/clk} -radix hex {0 0ns} {1 50000ps} -repeat_every 100000ps
+run 10 us
+add_force {/Exp1_Main/BTN_IN} -radix hex {1 0ns}
+run 10 us
+close_sim
+launch_simulation
+source Exp1_Main.tcl
+add_force {/Exp1_Main/BTN_IN} -radix hex {0 0ns}
+add_force {/Exp1_Main/BTN_IN} -radix hex {1 100ns}
+add_force {/Exp1_Main/clk} -radix hex {0 0ns} {1 50000ps} -repeat_every 100000ps
+run 10 us
+add_force {/Exp1_Main/BTN_IN} -radix hex {0 0ns}
+run 10 us
+add_force {/Exp1_Main/BTN_IN} -radix hex {1 0ns} -cancel_after 200ns
+run 10 us
+add_force {/Exp1_Main/BTN_IN} -radix hex {1 0ns} -cancel_after 150ns
+run 10 us
+close_sim
+launch_simulation
+source Exp1_Main.tcl
+add_force {/Exp1_Main/BTN_IN} -radix hex {0 0ns}
+add_force {/Exp1_Main/clk} -radix hex {0 0ns} {1 50000ps} -repeat_every 100000ps
+run 10 us
+add_force {/Exp1_Main/BTN_IN} -radix hex {1 0ns}
+run 10 us
+add_force {/Exp1_Main/COMPARATOR_GT} -radix hex {0 0ns}
+run 10 us
+remove_forces { {/Exp1_Main/COMPARATOR_GT} }
+run 10 us
+add_force {/Exp1_Main/BTN_IN} -radix hex {0 0ns}
+run 10 us
+add_force {/Exp1_Main/BTN_IN} -radix hex {1 0ns}
+run 10 us
+close_sim
+launch_simulation
+source Exp1_Main.tcl
+add_force {/Exp1_Main/BTN_IN} -radix hex {0 0ns}
+add_force {/Exp1_Main/clk} -radix hex {0 0ns} {1 50000ps} -repeat_every 100000ps
+run 10 us
+add_force {/Exp1_Main/BTN_IN} -radix hex {1 0ns}
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/oousterm/Documents/GitHub/CPE-233/Andrew is Bad/CPE_233_Olive and Andrew/CPE_233_Olive and Andrew.runs/impl_1/Exp1_Main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/oousterm/Documents/GitHub/CPE-233/Andrew is Bad/CPE_233_Olive and Andrew/CPE_233_Olive and Andrew.runs/impl_1/Exp1_Main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/oousterm/Documents/GitHub/CPE-233/Andrew is Bad/CPE_233_Olive and Andrew/CPE_233_Olive and Andrew.runs/impl_1/Exp1_Main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+run 10 us
+run 10 us
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/oousterm/Documents/GitHub/CPE-233/Andrew is Bad/CPE_233_Olive and Andrew/CPE_233_Olive and Andrew.runs/impl_1/Exp1_Main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_sim
