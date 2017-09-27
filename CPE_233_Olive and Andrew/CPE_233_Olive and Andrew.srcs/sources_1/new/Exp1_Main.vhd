@@ -33,7 +33,7 @@ component Counter_4Bit
                 LD : in std_logic;
                 EN : in std_logic; 
                 DIN : in std_logic_vector (3 downto 0); 
-                COUNT : out std_logic_vector (3 downto 0)
+                COUNT : out std_logic_vector (3 downto 0);
                 RCO : out std_logic); 
 end component;
 

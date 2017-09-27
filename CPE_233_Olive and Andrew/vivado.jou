@@ -2,10 +2,10 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Wed Sep 27 04:23:17 2017
-# Process ID: 7316
+# Start of session at: Wed Sep 27 14:10:52 2017
+# Process ID: 17960
 # Current directory: C:/Users/oousterm/Documents/GitHub/CPE-233/CPE_233_Olive and Andrew
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4204 C:\Users\oousterm\Documents\GitHub\CPE-233\CPE_233_Olive and Andrew\CPE_233_Olive and Andrew.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17424 C:\Users\oousterm\Documents\GitHub\CPE-233\CPE_233_Olive and Andrew\CPE_233_Olive and Andrew.xpr
 # Log file: C:/Users/oousterm/Documents/GitHub/CPE-233/CPE_233_Olive and Andrew/vivado.log
 # Journal file: C:/Users/oousterm/Documents/GitHub/CPE-233/CPE_233_Olive and Andrew\vivado.jou
 #-----------------------------------------------------------
@@ -13,3 +13,11 @@ start_gui
 open_project {C:/Users/oousterm/Documents/GitHub/CPE-233/CPE_233_Olive and Andrew/CPE_233_Olive and Andrew.xpr}
 update_compile_order -fileset sources_1
 launch_simulation
+launch_simulation
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_simulation
+source Exp1_Main.tcl
+restart
+run 10 us
+close_sim
