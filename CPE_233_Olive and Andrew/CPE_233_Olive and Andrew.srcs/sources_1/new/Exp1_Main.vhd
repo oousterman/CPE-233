@@ -33,8 +33,7 @@ component Counter_4Bit
                 LD : in std_logic;
                 EN : in std_logic; 
                 DIN : in std_logic_vector (3 downto 0); 
-                COUNT : out std_logic_vector (3 downto 0);
-                RCO : out std_logic); 
+                COUNT : out std_logic_vector (3 downto 0)); 
 end component;
 
 component MUX_4x1
@@ -93,7 +92,7 @@ component sseg_dec_uni
 end component;
 
 signal COUNTER0_RCO, COUNTER1_RCO, COMPARATOR_GT: STD_LOGIC;
-signal FSM_LD0, FSM_LD1, FSM_EN0, FSM_EN1, FSM_WE, FSM_CL, FSM_CSEL, FSM_RCO0, FSM_RCO1: std_LOGIC;
+signal FSM_LD0, FSM_LD1, FSM_EN0, FSM_EN1, FSM_WE, FSM_CL, FSM_CSEL: std_LOGIC;
 signal FSM_RSEL: STD_LOGIC_VECTOR(1 downto 0);
 signal COUNTER0_COUNT, RCA_OUT, COUNTER_MUX_OUT: STD_LOGIC_VECTOR (3 downto 0);
 signal ROM_DATA, REG0_OUT, REG1_OUT, RAM_MUX_OUT, RAM_DATA_OUT:STD_LOGIC_VECTOR (7 downto 0);
@@ -115,23 +114,21 @@ FSM1: FSM_Exp1
                WE => FSM_WE,
                CL => FSM_CL);
                
-COUNTER0: Counter_4bit  
+COUNTER0: Counter_4bit  --------------------RCO??????????
     port Map (  RESET => FSM_CL,
                 CLK => clk,
-                LD => '0', 
+                LD => '0', -------Do we use this in the format of this counter?????
                 EN => FSM_EN0,
-                DIN => "0000",
-                COUNT => COUNTER0_COUNT,
-                RCO => FSM_RCO0);
+                DIN => "0000", -----------Do we use this??
+                COUNT => COUNTER0_COUNT);
                 
-COUNTER1: Counter_4bit
+COUNTER1: Counter_4bit  --------------------RCO??????????
     port Map (  RESET => FSM_CL,
                 CLK => clk,
-                LD => '0', 
+                LD => '0', -------Do we use this in the format of this counter?????
                 EN => FSM_EN1,
-                DIN => "0000", 
-                COUNT => "0000",
-                RCO => FSM_RCO1);
+                DIN => "0000", -----------Do we use this??
+                COUNT => "0000");
                 
 COUNTER_MUX: MUX_2x1
     port Map (  a => RCA_OUT,
@@ -180,16 +177,17 @@ RCA: RCA_5Bit
                 SUM => RCA_OUT);
 
 SSEG_DISPLAY: sseg_dec_uni
-    port Map (  COUNT1 => RAM_DATA_OUT,
-                COUNT2 => "00000000",
-                SEL    => "10",
-                dp_oe  => '0',
-                dp     => "00",
-                CLK    => clk,
-                SIGN   => '0',
-                VALID  => '1',
-                DISP_EN => DISP_EN,
-                SEGMENTS => SEGMENTS);
+    port Map (  COUNT1 => 
+                COUNT2 =>
+                SEL    =>
+                dp_oe  =>
+                dp     =>
+                CLK    =>
+                SIGN   =>
+                VALID  =>
+                DISP_EN =>
+                SEGMENTS => );
+                
                 
 
 end Behavioral;
