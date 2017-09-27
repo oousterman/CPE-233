@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity FSM_Exp1 is 
     port ( BTN, RCO0,RCO1, GT, CLK : in  STD_LOGIC; 
            RSEL : out STD_LOGIC_VECTOR(1 downto 0); 
-           LD0, CSEL, LD1, EN0, EN1, WE, CL : out STD_LOGIC);  
+           LD0, CSEL, LD1, EN0, EN1, WE, CL, VALID : out STD_LOGIC);  
 end FSM_Exp1;
 architecture Behavioral of FSM_Exp1 is
    type state_type is (ST0,ST1,ST2,ST3,ST4,ST5,ST6); 
@@ -26,11 +26,13 @@ begin
       WE <= '0';
       CL <= '0';
       RSEL <= "00";
+      VALID <= '0';
       
       case PS is  
          when ST0 =>    -- items regarding state ST0
-            CSEL <= '1';  -- Moore output 
-        EN0 <= '1';
+            CSEL <= '1';  -- Moore output
+            VALId <= '1';
+            EN0 <= '1';
             if (BTN = '0') then 
                    NS <= ST0;   
             else  

@@ -9,7 +9,8 @@ entity Counter_4Bit is
                 LD : in std_logic;
                 EN : in std_logic; 
                 DIN : in std_logic_vector (3 downto 0); 
-                COUNT : out std_logic_vector (3 downto 0)); 
+                COUNT : out std_logic_vector (3 downto 0);
+                RCO : out std_logic); 
 end Counter_4Bit; 
 
 architecture Behavioral of Counter_4Bit is 
@@ -23,7 +24,10 @@ begin
       elsif (rising_edge(CLK)) then
          if (LD = '1') then     t_cnt <= DIN;  -- load
          else 
-            if (EN = '1') then  t_cnt <= t_cnt + 1; -- incr
+            if (EN = '1') then
+                t_cnt <= t_cnt + 1; -- incr
+                if(t_cnt = "1111") then RCO <= '1';
+                end if;
             else                t_cnt <= t_cnt; -- const
             end if;
          end if;
