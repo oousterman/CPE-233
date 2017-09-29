@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1506403060">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1506673805">
+  <File Type="PWROPT-DRC" Name="Exp1_Main_drc_pwropted.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Exp1_Main_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="Exp1_Main_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR-RPX" Name="Exp1_Main_power_routed.rpx"/>
   <File Type="PA-TCL" Name="Exp1_Main.tcl"/>
-  <File Type="INIT-TIMING" Name="Exp1_Main_timing_summary_init.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="Exp1_Main_methodology_drc_opted.rpt"/>
-  <File Type="PWROPT-DRC" Name="Exp1_Main_drc_pwropted.rpt"/>
+  <File Type="OPT-HWDEF" Name="Exp1_Main.hwdef"/>
   <File Type="RDI-RDI" Name="Exp1_Main.vdi"/>
   <File Type="OPT-DCP" Name="Exp1_Main_opt.dcp"/>
-  <File Type="OPT-HWDEF" Name="Exp1_Main.hwdef"/>
   <File Type="OPT-DRC" Name="Exp1_Main_drc_opted.rpt"/>
   <File Type="OPT-TIMING" Name="Exp1_Main_timing_summary_opted.rpt"/>
   <File Type="PWROPT-DCP" Name="Exp1_Main_pwropt.dcp"/>
@@ -31,14 +31,14 @@
   <File Type="ROUTE-BLACKBOX-DCP" Name="Exp1_Main_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="Exp1_Main_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="Exp1_Main_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="Exp1_Main_drc_routed.rpx"/>
   <File Type="BG-BIN" Name="Exp1_Main.bin"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="Exp1_Main_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="Exp1_Main_drc_routed.rpx"/>
   <File Type="BG-DRC" Name="Exp1_Main.drc"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Exp1_Main_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Exp1_Main_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-MSK" Name="Exp1_Main.msk"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Exp1_Main_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Exp1_Main_methodology_drc_routed.rpx"/>
   <File Type="BG-BGN" Name="Exp1_Main.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Exp1_Main_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR" Name="Exp1_Main_power_routed.rpt"/>
   <File Type="ROUTE-PWR-SUM" Name="Exp1_Main_power_summary_routed.pb"/>
   <File Type="ROUTE-STATUS" Name="Exp1_Main_route_status.rpt"/>
@@ -122,6 +122,12 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/clk_test.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/sseg_dec_uni.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -135,6 +141,13 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/clk_reducer_test.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/test_bench.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
