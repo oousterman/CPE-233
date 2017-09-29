@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon Sep 25 22:19:08 2017
+# Process ID: 8216
+# Current directory: C:/Users/aferg/OneDrive/Documents/GitHub/CPE-233/CPE_233_Olive and Andrew/CPE_233_Olive and Andrew.runs/impl_1
+# Command line: vivado.exe -log Exp1_Main.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Exp1_Main.tcl -notrace
+# Log file: C:/Users/aferg/OneDrive/Documents/GitHub/CPE-233/CPE_233_Olive and Andrew/CPE_233_Olive and Andrew.runs/impl_1/Exp1_Main.vdi
+# Journal file: C:/Users/aferg/OneDrive/Documents/GitHub/CPE-233/CPE_233_Olive and Andrew/CPE_233_Olive and Andrew.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source Exp1_Main.tcl -notrace
