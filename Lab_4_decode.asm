@@ -1,0 +1,21 @@
+.CSEG 
+.ORG 0X03
+
+
+init:	CLI
+
+		IN r0,0x33
+		MOV r0,0X23
+		MOV r1,0X23
+		MOV r2,0X04
+		MOV r3,0X00
+		CMP r0,0X00
+		AND r3,0X01
+		AND r0,0X01
+		AND r1,0X01
+		AND r3,0X00
+		SUB r2,0X01
+		ROR r3
+		AND r3,0X01
+		AND r0,0X01
+		LSL r3
