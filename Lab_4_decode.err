@@ -1,2 +1,4 @@
+ERROR # 1:  line# (0016): BRN Instruction requires one label-type operand!    
+                  "		BRN  
+"
 
- .CSEG must start at address 1 or greater 

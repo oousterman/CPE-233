@@ -15,32 +15,29 @@ C5:  Raw line from source code.
 
 
 (0001)                            || .CSEG 
-(0002)                       048  || .ORG 0X30
+(0002)                       048  || .ORG 0x30
 (0003)                            || 
-(0004)  CS-0x030  0x36023  0x030  || start:	MOV r0,0X23
-(0005)  CS-0x031  0x36167         || 		MOV r1,0X67
-(0006)  CS-0x032  0x36208         || 		MOV r2,0X08
-(0007)  CS-0x033  0x36300         || 		MOV r3,0X00
-(0008)  CS-0x034  0x18000  0x034  || loop:	CLC
-(0009)  CS-0x035  0x10301         || 		LSR r3
-(0010)  CS-0x036  0x10001         || 		LSR r0
-(0011)  CS-0x037  0x10101         || 		LSR r1
-(0012)                            || 		LSL r3 
+(0004)  CS-0x030  0x36023  0x030  || start:  MOV r0,0X23
+(0005)  CS-0x031  0x36167         ||         MOV r1,0X67
+(0006)  CS-0x032  0x36208         ||         MOV r2,0X08
+(0007)  CS-0x033  0x36300         ||         MOV r3,0X00
+(0008)                            || 
+(0009)  CS-0x034  0x18000         || CLC
+(0010)  CS-0x035  0x10301         || LSR r3
+(0011)  CS-0x036  0x10001         || LSR r0
+(0012)  CS-0x037  0x10101         || LSR r1
+(0013)  CS-0x038  0x10300         || LSL r3
+(0014)                            || ;SUB r2,0X01
+(0015)                            || BRN 0X34
             syntax error
             syntax error
 
-(0013)  CS-0x038  0x2C201         || 		SUB r2,0X01 
-(0014)  CS-0x039  0x10301         || 		LSR r3 
-            syntax error
-            syntax error
-
-(0015)  CS-0x03A  0x10001         || 		LSR r0
-(0016)                            || 		BRN  
-
-            **ERROR # 1:  line# (0016) => BRN Instruction requires one label-type operand! 
-
-(0017)                            || 		BRN  
-
+(0016)  CS-0x039  0x10301         || LSR r3 
+(0017)  CS-0x03A  0x10001         || LSR r0
+(0018)                            || 		;BRN start
+(0019)                            || 
+(0020)                            || 
+(0021)                            || 
 
 
 
@@ -59,7 +56,6 @@ C4+: source code line number of where symbol is referenced
 
 -- Labels
 ------------------------------------------------------------ 
-LOOP           0x034   (0008)  ||  
 START          0x030   (0004)  ||  
 
 
