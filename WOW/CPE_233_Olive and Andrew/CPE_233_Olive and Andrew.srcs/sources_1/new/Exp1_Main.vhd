@@ -6,7 +6,8 @@ entity Exp1_Main is
     port ( BTN_IN : in STD_LOGIC;
            clk : in STD_LOGIC;
            DISP_EN : out STD_LOGIC_VECTOR (3 downto 0);
-           SEGMENTS : out STD_LOGIC_VECTOR (7 downto 0));
+           SEGMENTS : out STD_LOGIC_VECTOR (7 downto 0);
+           LEDS : out STD_LOGIC_VECTOR (2 downto 0));
            
 end Exp1_Main;
 
@@ -17,6 +18,12 @@ architecture Behavioral of Exp1_Main is
 component CLK_reducer
         Port (CLK : in std_logic;
               FCLK,SCLK : out std_logic);
+end component;
+
+component clk_test
+        Port (clk : in std_logic;
+              clk_temp : buffer std_logic;
+              clk_out : out std_logic);
 end component;
 
 
@@ -82,7 +89,8 @@ component FSM_Exp1
         port ( BTN : in STD_LOGIC;
                RCO0, RCO1, GT, CLK : in  STD_LOGIC;
                RSEL : out STD_LOGIC_VECTOR(1 downto 0); 
-               LD0, LD1, CSEL, EN0, EN1, WE, CL : out STD_LOGIC);
+               LD0, LD1, CSEL, EN0, EN1, WE, CL : out STD_LOGIC;
+               LEDS : out STD_LOGIC_VECTOR(2 downto 0));
 end component;
 
 component sseg_dec_uni
@@ -99,7 +107,7 @@ component sseg_dec_uni
 end component;
 
 signal COUNTER0_RCO, COUNTER1_RCO, COMPARATOR_GT: STD_LOGIC;
-signal FSM_LD0, FSM_LD1, FSM_EN0, FSM_EN1, FSM_WE, FSM_CL, FSM_CSEL, FSM_RCO0, FSM_RCO1: std_LOGIC;
+signal FSM_LD0, FSM_LD1, FSM_EN0, FSM_EN1, FSM_WE, FSM_CL, FSM_CSEL, FSM_RCO0, FSM_RCO1, s_clk: std_LOGIC;
 signal FSM_RSEL: STD_LOGIC_VECTOR(1 downto 0);
 signal RCA_OUT, COUNTER0_COUNT, COUNTER_MUX_OUT : STD_LOGIC_VECTOR (3 downto 0);
 signal ROM_DATA, REG0_OUT, REG1_OUT, RAM_MUX_OUT, RAM_DATA_OUT:STD_LOGIC_VECTOR (7 downto 0);
@@ -113,11 +121,12 @@ begin
 process (RAM_DOUT_13Bit, RAM_DATA_OUT)
 begin
 RAM_DOUT_13Bit <= "000000" & RAM_DATA_OUT;
+slow_CLK <= clk;
 end process;
 
 CLK_SLOW: CLK_reducer
     port map(CLK => clk,
-             FCLK => slow_CLK,
+             FCLK => s0,
              SCLK => s0);
 
 FSM1: FSM_Exp1
@@ -133,7 +142,8 @@ FSM1: FSM_Exp1
                EN0 => FSM_EN0,
                EN1 => FSM_EN1,
                WE => FSM_WE,
-               CL => FSM_CL);
+               CL => FSM_CL,
+               LEDS => LEDS);
                
 COUNTER0: Counter_4bit  
     port Map (  RESET => FSM_CL,
@@ -211,6 +221,10 @@ SSEG_DISPLAY: sseg_dec_uni
                 DISP_EN => DISP_EN,
                 SEGMENTS => SEGMENTS);
                 
+CLK_TESTER: clk_test
+    port map ( clk => clk,
+               clk_out => s_clk);
+               
 
 end Behavioral;
 

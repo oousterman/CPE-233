@@ -32,10 +32,10 @@ signal PC_COUNT : STD_LOGIC_VECTOR (9 downto 0);
 
 begin
 
-PC: Program_Counter_Exp3  --------------------RCO??????????
+PC: Program_Counter_Exp3  
     port Map (  RESET => RST,
                 CLK => CLK,
-                LD => PC_LD, -------Do we use this in the format of this counter?????
+                LD => PC_LD,
                 EN => PC_INC,
                 FROM_IMMED => FROM_IMMED,
                 FROM_STACK => FROM_STACK,

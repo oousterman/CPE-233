@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date             : Mon Sep 25 22:20:21 2017
-| Host             : DESKTOP-37TJKR3 running 64-bit major release  (build 9200)
+| Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date             : Fri Sep 29 01:31:49 2017
+| Host             : RM100B2 running 64-bit major release  (build 9200)
 | Command          : report_power -file Exp1_Main_power_routed.rpt -pb Exp1_Main_power_summary_routed.pb -rpx Exp1_Main_power_routed.rpx
 | Design           : Exp1_Main
 | Device           : xc7a35tcpg236-1
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 41.616 (Junction temp exceeded!) |
-| Dynamic (W)              | 41.130                           |
+| Total On-Chip Power (W)  | 50.172 (Junction temp exceeded!) |
+| Dynamic (W)              | 49.686                           |
 | Device Static (W)        | 0.486                            |
 | Effective TJA (C/W)      | 5.0                              |
 | Max Ambient (C)          | 0.0                              |
@@ -49,17 +49,17 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic              |     5.322 |      824 |       --- |             --- |
-|   LUT as Logic           |     4.903 |      538 |     20800 |            2.59 |
-|   CARRY4                 |     0.369 |       84 |      8150 |            1.03 |
-|   Register               |     0.034 |       83 |     41600 |            0.20 |
+| Slice Logic              |     5.238 |      773 |       --- |             --- |
+|   LUT as Logic           |     4.847 |      531 |     20800 |            2.55 |
+|   CARRY4                 |     0.354 |       76 |      8150 |            0.93 |
+|   Register               |     0.021 |       50 |     41600 |            0.12 |
 |   LUT as Distributed RAM |     0.010 |        8 |      9600 |            0.08 |
 |   BUFG                   |     0.006 |        1 |        32 |            3.13 |
-|   Others                 |     0.000 |       16 |       --- |             --- |
-| Signals                  |     5.069 |      740 |       --- |             --- |
-| I/O                      |    30.738 |       14 |       106 |           13.21 |
+|   Others                 |     0.000 |       14 |       --- |             --- |
+| Signals                  |     5.128 |      695 |       --- |             --- |
+| I/O                      |    39.321 |       17 |       106 |           16.04 |
 | Static Power             |     0.486 |          |           |                 |
-| Total                    |    41.616 |          |           |                 |
+| Total                    |    50.172 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -69,9 +69,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |    10.740 |      10.399 |      0.341 |
-| Vccaux    |       1.800 |     1.179 |       1.126 |      0.053 |
-| Vcco33    |       3.300 |     8.699 |       8.698 |      0.001 |
+| Vccint    |       1.000 |    10.714 |      10.374 |      0.341 |
+| Vccaux    |       1.800 |     1.494 |       1.441 |      0.053 |
+| Vcco33    |       3.300 |    11.128 |      11.127 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -136,24 +136,23 @@ Table of Contents
 +-------------------------+-----------+
 | Name                    | Power (W) |
 +-------------------------+-----------+
-| Exp1_Main               |    41.130 |
-|   CLK_SLOW              |     0.168 |
+| Exp1_Main               |    49.686 |
 |   COMPARATOR            |     0.009 |
-|   COUNTER0              |     0.086 |
-|   FSM1                  |     0.287 |
-|   RAM                   |     0.669 |
+|   COUNTER0              |     0.089 |
+|   FSM1                  |     0.442 |
+|   RAM                   |     0.633 |
 |     MY_RAM_reg_0_15_0_0 |    <0.001 |
-|     MY_RAM_reg_0_15_1_1 |     0.012 |
-|     MY_RAM_reg_0_15_2_2 |     0.013 |
-|     MY_RAM_reg_0_15_3_3 |     0.031 |
+|     MY_RAM_reg_0_15_1_1 |     0.014 |
+|     MY_RAM_reg_0_15_2_2 |     0.015 |
+|     MY_RAM_reg_0_15_3_3 |     0.035 |
 |     MY_RAM_reg_0_15_4_4 |     0.024 |
 |     MY_RAM_reg_0_15_5_5 |     0.005 |
 |     MY_RAM_reg_0_15_6_6 |    <0.001 |
 |     MY_RAM_reg_0_15_7_7 |    <0.001 |
-|   REG1                  |     0.055 |
-|   SSEG_DISPLAY          |     9.096 |
-|     my_clk              |     0.158 |
-|     my_conv1            |     8.673 |
+|   REG1                  |     0.049 |
+|   SSEG_DISPLAY          |     9.123 |
+|     my_clk              |     0.151 |
+|     my_conv1            |     8.689 |
 +-------------------------+-----------+
 
 

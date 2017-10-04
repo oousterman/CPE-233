@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
-# Vivado v2017.1 (64-bit)
-# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
-# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
-# Start of session at: Mon Sep 25 22:17:45 2017
-# Process ID: 18364
-# Current directory: C:/Users/aferg/OneDrive/Documents/GitHub/CPE-233/CPE_233_Olive and Andrew/CPE_233_Olive and Andrew.runs/synth_1
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Sep 29 01:30:07 2017
+# Process ID: 8
+# Current directory: C:/Users/oousterm/Documents/GitHub/CPE-233/WOW/CPE_233_Olive and Andrew/CPE_233_Olive and Andrew.runs/synth_1
 # Command line: vivado.exe -log Exp1_Main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Exp1_Main.tcl
-# Log file: C:/Users/aferg/OneDrive/Documents/GitHub/CPE-233/CPE_233_Olive and Andrew/CPE_233_Olive and Andrew.runs/synth_1/Exp1_Main.vds
-# Journal file: C:/Users/aferg/OneDrive/Documents/GitHub/CPE-233/CPE_233_Olive and Andrew/CPE_233_Olive and Andrew.runs/synth_1\vivado.jou
+# Log file: C:/Users/oousterm/Documents/GitHub/CPE-233/WOW/CPE_233_Olive and Andrew/CPE_233_Olive and Andrew.runs/synth_1/Exp1_Main.vds
+# Journal file: C:/Users/oousterm/Documents/GitHub/CPE-233/WOW/CPE_233_Olive and Andrew/CPE_233_Olive and Andrew.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source Exp1_Main.tcl -notrace
