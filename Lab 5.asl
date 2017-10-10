@@ -43,11 +43,11 @@ C5:  Raw line from source code.
 (0027)  CS-0x014  0x18002         || 		RET
 (0028)                            || 
 (0029)  CS-0x015  0x13401  0x015  || TENS:	PUSH 	r20
-(0030)  CS-0x016  0x36A04         || 		MOV 	r10, 0X04
-(0031)  CS-0x017  0x18000         || 		CLC
-(0032)  CS-0x018  0x11401  0x018  || SHIFT:	LSR 	r20
-(0033)  CS-0x019  0x2CA01         || 		SUB 	r10, 0X01
-(0034)  CS-0x01A  0x080C3         || 		BRNE	SHIFT
+(0030)  CS-0x016  0x11401         || 		LSR 	r20
+(0031)  CS-0x017  0x11401         || 		LSR		r20
+(0032)  CS-0x018  0x11401         || 		LSR		r20
+(0033)  CS-0x019  0x11401         || 		LSR 	r20
+(0034)  CS-0x01A  0x2140F         || 		AND 	r20, 0X0F
 (0035)  CS-0x01B  0x051A1         || 		MOV 	r17, r20
 (0036)  CS-0x01C  0x13402         || 		POP 	r20
 (0037)  CS-0x01D  0x18002         || 		RET
@@ -79,7 +79,6 @@ C4+: source code line number of where symbol is referenced
 LOOP           0x011   (0024)  ||  0026 
 MAIN           0x001   (0006)  ||  0020 
 MULTI          0x00F   (0022)  ||  0011 0013 0016 
-SHIFT          0x018   (0032)  ||  0034 
 TENS           0x015   (0029)  ||  0015 
 
 

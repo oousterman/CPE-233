@@ -27,11 +27,11 @@ LOOP:	ADD   	r18, r17    ; accumulate
 		RET
 
 TENS:	PUSH 	r20
-		MOV 	r10, 0X04
-		CLC
-SHIFT:	LSR 	r20
-		SUB 	r10, 0X01
-		BRNE	SHIFT
+		LSR 	r20
+		LSR		r20
+		LSR		r20
+		LSR 	r20
+		AND 	r20, 0X0F
 		MOV 	r17, r20
 		POP 	r20
 		RET
