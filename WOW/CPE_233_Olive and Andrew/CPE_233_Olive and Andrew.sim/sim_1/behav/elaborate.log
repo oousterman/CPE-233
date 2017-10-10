@@ -25,6 +25,5 @@ Compiling architecture behavioral of entity xil_defaultlib.RCA_5Bit [rca_5bit_de
 Compiling architecture my_ckt of entity xil_defaultlib.bin2bcdconv [bin2bcdconv_default]
 Compiling architecture my_clk_div of entity xil_defaultlib.clk_div [clk_div_default]
 Compiling architecture my_sseg of entity xil_defaultlib.sseg_dec_uni [sseg_dec_uni_default]
-Compiling architecture behavioral of entity xil_defaultlib.clk_test [clk_test_default]
 Compiling architecture behavioral of entity xil_defaultlib.exp1_main
 Built simulation snapshot Exp1_Main_behav

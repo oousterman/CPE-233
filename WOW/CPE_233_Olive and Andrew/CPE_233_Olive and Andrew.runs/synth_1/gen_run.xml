@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1506673805">
-  <File Type="RDS-PROPCONSTRS" Name="Exp1_Main_drc_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1506403060">
   <File Type="PA-TCL" Name="Exp1_Main.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Exp1_Main_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="Exp1_Main.vds"/>
   <File Type="RDS-UTIL" Name="Exp1_Main_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="Exp1_Main_utilization_synth.pb"/>
@@ -70,12 +70,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/clk_test.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/sseg_dec_uni.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -89,13 +83,6 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/clk_reducer_test.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/test_bench.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>

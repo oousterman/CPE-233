@@ -3,8 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity FSM_Exp1 is 
     port ( BTN, RCO0,RCO1, GT, CLK : in  STD_LOGIC; 
            RSEL : out STD_LOGIC_VECTOR(1 downto 0); 
-           LD0, CSEL, LD1, EN0, EN1, WE, CL : out STD_LOGIC;
-           LEDS : out STD_LOGIC_VECTOR (2 downto 0));  
+           LD0, CSEL, LD1, EN0, EN1, WE, CL : out STD_LOGIC);  
 end FSM_Exp1;
 architecture Behavioral of FSM_Exp1 is
    type state_type is (ST0,ST1,ST2,ST3,ST4,ST5,ST6); 
@@ -27,12 +26,10 @@ begin
       WE <= '0';
       CL <= '0';
       RSEL <= "00";
-      LEDS <= "111";
       
       case PS is  
          when ST0 =>    -- items regarding state ST0
             CSEL <= '1';  -- Moore output 
-            LEDS <= "001";
         EN0 <= '1';
             if (BTN = '0') then 
                    NS <= ST0;   
@@ -42,25 +39,21 @@ begin
                 
          when ST1 =>    -- items regarding state ST1
             CSEL <= '1';  -- Moore output
-            
-            WE <= '1';
-            EN0 <= '1';
+        WE <= '1';
+        EN0 <= '1';
             if (RCO0 = '0') then 
                    NS <= ST1;
-                   LEDS <= "010";
             else  
                    NS <= ST2;
             end if; 
                 
          when ST2 =>    -- items regarding state ST2
             CSEL <= '0';  -- Moore output 
-            LD0 <= '0';
+        LD0 <= '0';
             NS <= ST3;
-            LEDS <= "011";
                 
          when ST3 =>    -- items regarding state ST3
             LD1 <= '1';  -- Moore output 
-            LEDS <= "100";
             if (GT = '0') then 
                    NS <= ST6;
             else  
@@ -71,18 +64,13 @@ begin
         RSEL <= "10";
         WE <= '1';
         NS <= ST5;
-        LEDS <= "101";
-
      when ST5 =>
         RSEL <= "01";
         WE <= '1';
         CSEL <= '1';
         NS <= ST6;
-        LEDS <= "110";
-
      when ST6 =>
         EN0 <= '1';
-        LEDS <= "000";
         if (RCO1 = '0' and RCO0 = '1') then
                    NS <= ST6;
         elsif (RCO1 = '0' and RCO0 = '0') then
