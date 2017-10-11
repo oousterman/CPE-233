@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Wed Oct 11 04:26:23 2017
+# Process ID: 10608
+# Current directory: C:/Users/oousterm/Documents/GitHub/CPE-233/Lab_05/Lab_05.runs/impl_1
+# Command line: vivado.exe -log Lab_5_Main.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Lab_5_Main.tcl -notrace
+# Log file: C:/Users/oousterm/Documents/GitHub/CPE-233/Lab_05/Lab_05.runs/impl_1/Lab_5_Main.vdi
+# Journal file: C:/Users/oousterm/Documents/GitHub/CPE-233/Lab_05/Lab_05.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source Lab_5_Main.tcl -notrace
