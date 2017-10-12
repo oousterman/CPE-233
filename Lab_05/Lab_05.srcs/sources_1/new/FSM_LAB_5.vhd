@@ -4,10 +4,10 @@ entity FSM_LAB_5 is
     port ( BTN, RCO0, RCO1, GT, CLK : in  STD_LOGIC; 
            MxSel0 : out STD_LOGIC_VECTOR(1 downto 0); 
            WE, CLR, CEN0, MxSel1, LDRG0 : out STD_LOGIC;
-           STATE : out STD_LOGIC_VECTOR (2 downto 0));
+           STATE : out STD_LOGIC_VECTOR (3 downto 0));
 end FSM_LAB_5;
 architecture Behavioral of FSM_LAB_5 is
-   type state_type is (Disp, Trans, Comp, LdRegSt, LdSt0, LdSt1); 
+   type state_type is (Disp, Trans, Comp, LdRegSt, LdSt0, LdSt1, Check); 
    signal PS,NS : state_type; 
 begin
    sync_proc: process(CLK,NS)
@@ -25,12 +25,12 @@ begin
       LDRG0 <= '0';
       WE <= '0';
       MxSel0 <= "00";
-      STATE <= "111";
+      STATE <= "1111";
       
       case PS is  
          when Disp =>    -- items regarding state ST0
             CEN0 <= '1';  -- Moore output 
-            STATE<= "001";
+            STATE<= "0001";
             if (BTN = '0') then 
                    NS <= Disp;
             else  
@@ -42,7 +42,7 @@ begin
             WE <= '1';
             MxSel0 <= "10";
             MxSel1 <= '0';
-            STATE <= "010";
+            STATE <= "0010";
             if (RCO0 = '0') then 
                    NS <= Trans;
             else  
@@ -50,44 +50,52 @@ begin
             end if; 
                 
          when Comp =>    -- items regarding state ST2
-            CEN0 <= '1';  -- Moore output 
+            --CEN0 <= '1';  -- Moore output 
             MxSel1 <= '0';
-            STATE <= "011";
+            STATE <= "0011";
             if (RCO1 = '1') then
                 NS <= Disp;
             elsif (GT = '1') then
                 NS <= LdRegSt; CEN0 <= '0';
             else
-                NS <= Comp;
+                NS <= Check; CEN0 <= '1';
             end if;
          
          when LdRegSt =>
-            STATE <= "100";
+            STATE <= "0100";
             LDRG0 <= '1';
             NS <= LdSt0;
                 
          when LdSt0 =>    -- items regarding state ST3
             LDRG0 <= '0';  -- Moore output
             WE <= '1';
+            MxSel0 <= "01";
+            MxSel1 <= '0';
+            CEN0 <= '0';
+            STATE <= "0101";
+                NS <= LdSt1;
+
+         when LdSt1 =>
+            WE <= '1';
             MxSel0 <= "00";
             MxSel1 <= '1';
             CEN0 <= '0';
-            STATE <= "101";
-                NS <= LdSt1;
-
-
-    
-     when LdSt1 =>
-        WE <= '1';
-        MxSel0 <= "01";
-        MxSel1 <= '0';
-        CEN0 <= '0';
-        STATE <= "110";
-        NS <= Comp;
-                         
-     when others => -- the catch all condition
-            NS <= Disp;
-     end case; 
+            STATE <= "0110";
+            NS <= Check; CEN0 <= '1';
+            
+         when Check =>
+            STATE <= "0111";
+            if (RCO1 = '1') then
+                NS <= Disp;
+            elsif (RCO0 = '1') then
+                NS <= Comp; CEN0 <= '1';
+            else
+                NS <= Comp;
+            end if;
+                             
+         when others => -- the catch all condition
+                NS <= Disp;
+         end case; 
      
    end process comb_proc; 
  

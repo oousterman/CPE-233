@@ -93,7 +93,7 @@ component FSM_LAB_5
                CLR      : out STD_LOGIC;
                MxSel1   : out STD_LOGIC;
                LDRG0    : out STD_LOGIC;
-               STATE    : out STD_LOGIC_VECTOR(2 downto 0));
+               STATE    : out STD_LOGIC_VECTOR(3 downto 0));
 end component;
 
 component sseg_dec_uni
@@ -121,7 +121,7 @@ signal FSM_LDRG0        : std_logic;
 signal SLW_CLK          : std_logic;
 signal FST_CLK          : std_logic;
 signal FSM_MxSel0       : std_logic_vector(1 downto 0);
-signal FSM_STATE        : std_logic_vector(2 downto 0);
+signal FSM_STATE        : std_logic_vector(3 downto 0);
 signal NONE             : std_logic_vector(3 downto 0);
 signal MUX1_OUT         : std_logic_vector(3 downto 0);
 signal CNT0             : std_logic_vector(3 downto 0);
@@ -187,8 +187,8 @@ MUX_1: MUX_2x1
                 res =>      MUX1_OUT);
                 
 MUX_0: MUX_4x1
-    port Map (  a =>        RAM_OUT_X,
-                b =>        REG0_OUT,
+    port Map (  a =>        REG0_OUT,
+                b =>        RAM_OUT_Y,
                 c =>        ROM_OUT,
                 d =>        "00000000",
                 sel =>      FSM_MxSel0,
@@ -204,7 +204,7 @@ RAM: Dual_Port_Ram
                 CLK =>      CLK);
 
 REG0: Register_8Bit
-    port Map (  d_in =>     RAM_OUT_Y,
+    port Map (  d_in =>     RAM_OUT_X,
                 load =>     FSM_LDRG0,
                 d_out =>    REG0_OUT);
 
