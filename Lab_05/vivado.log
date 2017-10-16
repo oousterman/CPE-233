@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Mon Oct 16 06:54:19 2017
+# Process ID: 2556
+# Current directory: C:/Users/ooust/Desktop/Cal Poly/5.Fall 2017/CPE 233/CPE-233/Lab_05
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15788 C:\Users\ooust\Desktop\Cal Poly\5.Fall 2017\CPE 233\CPE-233\Lab_05\Lab_05.xpr
+# Log file: C:/Users/ooust/Desktop/Cal Poly/5.Fall 2017/CPE 233/CPE-233/Lab_05/vivado.log
+# Journal file: C:/Users/ooust/Desktop/Cal Poly/5.Fall 2017/CPE 233/CPE-233/Lab_05\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/ooust/Desktop/Cal Poly/5.Fall 2017/CPE 233/CPE-233/Lab_05/Lab_05.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/Users/oousterm/Documents/GitHub/CPE-233/Lab_05' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [Project 1-230] Project 'Lab_05.xpr' upgraded for this version of Vivado.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.3/data/ip'.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 804.238 ; gain = 89.730
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 16 07:23:23 2017...
