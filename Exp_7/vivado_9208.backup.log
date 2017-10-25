@@ -1,0 +1,50 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Wed Oct 25 15:58:08 2017
+# Process ID: 9208
+# Current directory: C:/Users/oousterm/Documents/GitHub/CPE-233/Exp_7
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16724 C:\Users\oousterm\Documents\GitHub\CPE-233\Exp_7\Exp_7.xpr
+# Log file: C:/Users/oousterm/Documents/GitHub/CPE-233/Exp_7/vivado.log
+# Journal file: C:/Users/oousterm/Documents/GitHub/CPE-233/Exp_7\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/oousterm/Documents/GitHub/CPE-233/Exp_7/Exp_7.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/oousterm/Downloads/ALU.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/oousterm/Desktop/prog_rom.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/Downloads/drive-download-20171023T080615Z-001/ProgramCounter.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/Downloads/drive-download-20171023T080615Z-001/PC_MUX.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/Downloads/drive-download-20171023T080615Z-001/ProgCounter_Exp3.vhd'.
+Scanning sources...
+Finished scanning sources
+ERROR: [Common 17-70] Application Exception: non-unique attr Db Id
+open_project C:/Users/oousterm/Documents/GitHub/CPE-233/Exp_7/Exp_7.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/oousterm/Downloads/ALU.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/oousterm/Desktop/prog_rom.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/Downloads/drive-download-20171023T080615Z-001/ProgramCounter.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/Downloads/drive-download-20171023T080615Z-001/PC_MUX.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/Downloads/drive-download-20171023T080615Z-001/ProgCounter_Exp3.vhd'.
+Scanning sources...
+Finished scanning sources
+ERROR: [Common 17-70] Application Exception: non-unique attr Db Id
+open_project C:/Users/oousterm/Documents/GitHub/CPE-233/Exp_7/Exp_7.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/oousterm/Downloads/ALU.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/oousterm/Desktop/prog_rom.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/Downloads/drive-download-20171023T080615Z-001/ProgramCounter.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/Downloads/drive-download-20171023T080615Z-001/PC_MUX.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/Downloads/drive-download-20171023T080615Z-001/ProgCounter_Exp3.vhd'.
+Scanning sources...
+Finished scanning sources
+ERROR: [Common 17-70] Application Exception: non-unique attr Db Id
+open_project C:/Users/oousterm/Documents/GitHub/CPE-233/Exp_7/Exp_7.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/oousterm/Downloads/ALU.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/oousterm/Desktop/prog_rom.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/Downloads/drive-download-20171023T080615Z-001/ProgramCounter.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/Downloads/drive-download-20171023T080615Z-001/PC_MUX.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/Downloads/drive-download-20171023T080615Z-001/ProgCounter_Exp3.vhd'.
+Scanning sources...
+Finished scanning sources
+ERROR: [Common 17-70] Application Exception: non-unique attr Db Id
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 25 15:59:16 2017...

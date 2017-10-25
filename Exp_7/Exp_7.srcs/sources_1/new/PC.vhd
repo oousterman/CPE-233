@@ -42,8 +42,6 @@ begin
             else 
                 if (PC_INC = '1') then  
                     s_cnt <= s_cnt + 1; -- incr
-                else                
-                    s_cnt <= s_cnt - 1; -- decr
                 end if;
             end if;
         end if;

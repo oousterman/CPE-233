@@ -100,7 +100,7 @@ architecture Behavioral of RAT_MCU is
               DY_OUT : out    STD_LOGIC_VECTOR (7 downto 0);
               ADRX   : in     STD_LOGIC_VECTOR (4 downto 0);
               ADRY   : in     STD_LOGIC_VECTOR (4 downto 0);
-              WR     : in     STD_LOGIC;
+              WE     : in     STD_LOGIC;
               CLK    : in     STD_LOGIC);
    end component;
 
@@ -117,6 +117,22 @@ architecture Behavioral of RAT_MCU is
              CLR  : in  STD_LOGIC; --clear the flag to '0'
              CLK  : in  STD_LOGIC; --system clock
              Q    : out  STD_LOGIC); --flag output
+   end component;
+   
+   component MUX_2x1
+       Port ( a : in STD_LOGIC_VECTOR (7 downto 0);
+              b : in STD_LOGIC_VECTOR (7 downto 0);
+              sel : in STD_LOGIC;
+              res : out STD_LOGIC_VECTOR (7 downto 0));
+   end component;
+   
+   component MUX_4x1
+       Port ( a : in STD_LOGIC_VECTOR (7 downto 0);
+              b : in STD_LOGIC_VECTOR (7 downto 0);
+              c : in STD_LOGIC_VECTOR (7 downto 0);
+              d : in STD_LOGIC_VECTOR (7 downto 0);
+              sel : in STD_LOGIC_VECTOR (1 downto 0);
+              res : out STD_LOGIC_VECTOR (7 downto 0));
    end component;
 
    -- intermediate signals ----------------------------------
@@ -211,8 +227,8 @@ begin
               FLG_SHAD_LD   => S_FLG_SHAD_LD, 
               FLG_LD_SEL    => S_FLG_LD_SEL, 
               FLG_Z_LD      => S_FLG_Z_LD, 
-              I_SET    => S_I_SET, 
-              I_CLR    => S_I_CLR,  
+              I_SET         => S_I_SET, 
+              I_CLR         => S_I_CLR,  
 
               RST           => S_RST,
               IO_STRB       => IO_STRB);
@@ -224,7 +240,7 @@ begin
               DY_OUT => S_RF_DY_OUT,   
               ADRX   => S_INST_REG(12 downto 8),   
               ADRY   => S_INST_REG(7 downto 3),     
-              WR     => S_RF_WR,   
+              WE     => S_RF_WR,   
               CLK    => CLK); 
 
 
@@ -252,5 +268,23 @@ begin
               CLK   => CLK,
               Q     => S_Z_FLAG);
               
+   my_Reg_Mux: Mux_4x1
+   port map ( a     => IN_PORT,
+              b     => x"00",
+              c     => x"00",
+              d     => S_ALU_RESULT,
+              sel   => S_RF_WR_SEL,
+              res   => S_RF_MUX_OUT);   
+              
+   my_ALU_MUX: Mux_2x1
+   port map ( a     => S_RF_DY_OUT,
+              b     => S_INST_REG(7 downto 0),
+              sel   => S_ALU_OPY_SEL,
+              res   => S_ALU_MUX);
+              
+   PORT_ID  <= S_INST_REG(7 downto 0);
+   OUT_PORT <= S_RF_DX_OUT;
+   
+          
 
 end Behavioral;
