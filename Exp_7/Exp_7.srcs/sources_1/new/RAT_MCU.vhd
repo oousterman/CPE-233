@@ -37,7 +37,7 @@ end RAT_MCU;
 
 architecture Behavioral of RAT_MCU is
 
-   component prog_rom  
+   component my_prog_rom  
       port (     ADDRESS : in std_logic_vector(9 downto 0); 
              INSTRUCTION : out std_logic_vector(17 downto 0); 
                      CLK : in std_logic);  
@@ -152,7 +152,7 @@ architecture Behavioral of RAT_MCU is
    signal S_RF_DX_OUT : std_logic_vector (7 downto 0);
    signal S_RF_DY_OUT : std_logic_vector (7 downto 0);
    signal S_RF_MUX_OUT : std_logic_vector (7 downto 0);
-   signal S_RF_WR_SEL : std_logic_vector (1 downto 0);
+   signal S_RF_WE_SEL : std_logic_vector (1 downto 0);
    signal S_SP_INCR : std_logic;
    signal S_SP_LD : std_logic;
    signal S_SP_DECR : std_logic;
@@ -179,7 +179,7 @@ architecture Behavioral of RAT_MCU is
 
 begin
 
-   my_prog_rom: prog_rom  
+   prog_rom: my_prog_rom  
    port map(     ADDRESS => s_pc_count, 
              INSTRUCTION => s_inst_reg, 
                      CLK => CLK); 
@@ -212,7 +212,7 @@ begin
               SP_DECR       => S_SP_DECR, 
 
               RF_WR         => S_RF_WR, 
-              RF_WR_SEL     => S_RF_WR_SEL, 
+              RF_WR_SEL     => S_RF_WE_SEL, 
 
               ALU_OPY_SEL   => S_ALU_OPY_SEL, 
               ALU_SEL       => S_ALU_SEL,
@@ -248,7 +248,7 @@ begin
    port map ( RST        => S_RST,
               CLK        => CLK,
               PC_LD      => S_PC_LD,
-              PC_INC     => S_PC_LD,
+              PC_INC     => S_PC_INC,
               D_IN       => S_INST_REG(12 downto 3),
               PC_COUNT   => S_PC_COUNT); 
               
@@ -269,11 +269,11 @@ begin
               Q     => S_Z_FLAG);
               
    my_Reg_Mux: Mux_4x1
-   port map ( a     => IN_PORT,
+   port map ( a     => S_ALU_RESULT,
               b     => x"00",
               c     => x"00",
-              d     => S_ALU_RESULT,
-              sel   => S_RF_WR_SEL,
+              d     => IN_PORT,
+              sel   => S_RF_WE_SEL,
               res   => S_RF_MUX_OUT);   
               
    my_ALU_MUX: Mux_2x1
@@ -282,7 +282,7 @@ begin
               sel   => S_ALU_OPY_SEL,
               res   => S_ALU_MUX);
               
-   PORT_ID  <= X"20";
+   PORT_ID  <= S_INST_REG(7 downto 0);
    OUT_PORT <= S_RF_DX_OUT;
    
           

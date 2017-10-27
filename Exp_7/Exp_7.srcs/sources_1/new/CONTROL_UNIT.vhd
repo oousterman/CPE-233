@@ -150,9 +150,11 @@ begin
                     IO_STRB <= '1';
                     NS <= ST_fet;
 		  -- MOV reg-immed  ------
-              when "1101100" | "1101101" | "1101110" | "1101111" =>		               
+              when "1101100" | "1101101" | "1101110" | "1101111" =>
+                    ALU_OPY_SEL <= '1';
+                    ALU_SEL <= "1110";		               
                     RF_WR     <= '1';   
-                    RF_WR_SEL <= "01";
+                    RF_WR_SEL <= "00";
                     NS <= ST_fet;
               when others =>  -- for inner case
                   NS <= ST_fet;       

@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir C:/Users/ooust/Desktop/Cal Poly/5.Fall 2017/CPE 233/CPE-233/Exp_7/Exp_7.sim/sim_1/behav/xsim/xsim.dir/tb_RAT_wrapper_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Fri Oct 27 01:47:13 2017" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Fri Oct 27 03:32:06 2017" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2017.3 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2018833" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "fbd053d0-c11f-470d-9b1c-d372aa922a36" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "10d62736f9fc446cb036b7821d40cd07" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "23" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "43" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz" -context "user_environment"
@@ -37,6 +37,6 @@ webtalk_add_data -client xsim -key Total_Processes -value "88" -context "xsim\\u
 webtalk_add_data -client xsim -key Total_Instances -value "29" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Xilinx_HDL_Libraries_Used -value "secureip " -context "xsim\\usage"
 webtalk_add_data -client xsim -key Compiler_Time -value "1.86_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Memory -value "192188_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 1206784507 -regid "" -xml C:/Users/ooust/Desktop/Cal Poly/5.Fall 2017/CPE 233/CPE-233/Exp_7/Exp_7.sim/sim_1/behav/xsim/xsim.dir/tb_RAT_wrapper_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/ooust/Desktop/Cal Poly/5.Fall 2017/CPE 233/CPE-233/Exp_7/Exp_7.sim/sim_1/behav/xsim/xsim.dir/tb_RAT_wrapper_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/ooust/Desktop/Cal Poly/5.Fall 2017/CPE 233/CPE-233/Exp_7/Exp_7.sim/sim_1/behav/xsim/xsim.dir/tb_RAT_wrapper_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Compiler_Memory -value "192200_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 659644516 -regid "" -xml C:/Users/ooust/Desktop/Cal Poly/5.Fall 2017/CPE 233/CPE-233/Exp_7/Exp_7.sim/sim_1/behav/xsim/xsim.dir/tb_RAT_wrapper_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/ooust/Desktop/Cal Poly/5.Fall 2017/CPE 233/CPE-233/Exp_7/Exp_7.sim/sim_1/behav/xsim/xsim.dir/tb_RAT_wrapper_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/ooust/Desktop/Cal Poly/5.Fall 2017/CPE 233/CPE-233/Exp_7/Exp_7.sim/sim_1/behav/xsim/xsim.dir/tb_RAT_wrapper_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate

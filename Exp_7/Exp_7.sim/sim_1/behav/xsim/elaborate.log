@@ -24,7 +24,7 @@ Compiling architecture behavioral of entity xil_defaultlib.clk_div2_buf [clk_div
 Compiling architecture rb18_internal_vhdl_v of entity unisim.RB18_INTERNAL_VHDL [\RB18_INTERNAL_VHDL(bram_size=18...]
 Compiling architecture ramb18e1_v of entity unisim.RAMB18E1 [\RAMB18E1(initp_00="000000000000...]
 Compiling architecture ramb16_s18_v of entity unisim.RAMB16_S18 [\RAMB16_S18(initp_00="0000000000...]
-Compiling architecture low_level_definition of entity xil_defaultlib.prog_rom [prog_rom_default]
+Compiling architecture low_level_definition of entity xil_defaultlib.my_prog_rom [my_prog_rom_default]
 Compiling architecture alu_arch of entity xil_defaultlib.ALU [alu_default]
 Compiling architecture behavioral of entity xil_defaultlib.CONTROL_UNIT [control_unit_default]
 Compiling architecture behavioral of entity xil_defaultlib.RegisterFile [registerfile_default]
