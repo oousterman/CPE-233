@@ -1,14 +1,14 @@
 #-----------------------------------------------------------
-# Vivado v2017.3 (64-bit)
-# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
-# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Mon Oct 16 06:54:19 2017
-# Process ID: 2556
-# Current directory: C:/Users/ooust/Desktop/Cal Poly/5.Fall 2017/CPE 233/CPE-233/Lab_05
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15788 C:\Users\ooust\Desktop\Cal Poly\5.Fall 2017\CPE 233\CPE-233\Lab_05\Lab_05.xpr
-# Log file: C:/Users/ooust/Desktop/Cal Poly/5.Fall 2017/CPE 233/CPE-233/Lab_05/vivado.log
-# Journal file: C:/Users/ooust/Desktop/Cal Poly/5.Fall 2017/CPE 233/CPE-233/Lab_05\vivado.jou
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Oct 27 14:48:32 2017
+# Process ID: 10796
+# Current directory: C:/Users/oousterm/Documents/GitHub/CPE-233/5 Register File/Lab_05
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5976 C:\Users\oousterm\Documents\GitHub\CPE-233\5 Register File\Lab_05\Lab_05.xpr
+# Log file: C:/Users/oousterm/Documents/GitHub/CPE-233/5 Register File/Lab_05/vivado.log
+# Journal file: C:/Users/oousterm/Documents/GitHub/CPE-233/5 Register File/Lab_05\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Users/ooust/Desktop/Cal Poly/5.Fall 2017/CPE 233/CPE-233/Lab_05/Lab_05.xpr}
+open_project {C:/Users/oousterm/Documents/GitHub/CPE-233/5 Register File/Lab_05/Lab_05.xpr}
 update_compile_order -fileset sources_1

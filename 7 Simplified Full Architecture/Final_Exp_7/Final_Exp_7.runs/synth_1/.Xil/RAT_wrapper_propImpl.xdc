@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/oousterm/Documents/GitHub/CPE-233/Final_Exp_7/Final_Exp_7.srcs/constrs_1/new/EXP_7_Constraints.xdc rfile:../../../Final_Exp_7.srcs/constrs_1/new/EXP_7_Constraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:{C:/Users/oousterm/Documents/GitHub/CPE-233/7 Simplified Full Architecture/Final_Exp_7/Final_Exp_7.srcs/constrs_1/new/EXP_7_Constraints.xdc} rfile:../../../Final_Exp_7.srcs/constrs_1/new/EXP_7_Constraints.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W5 [get_ports CLK]
 set_property src_info {type:XDC file:1 line:13 export:INPUT save:INPUT read:READ} [current_design]

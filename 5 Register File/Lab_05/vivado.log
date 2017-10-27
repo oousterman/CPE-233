@@ -1,24 +1,23 @@
 #-----------------------------------------------------------
-# Vivado v2017.3 (64-bit)
-# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
-# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Mon Oct 16 06:54:19 2017
-# Process ID: 2556
-# Current directory: C:/Users/ooust/Desktop/Cal Poly/5.Fall 2017/CPE 233/CPE-233/Lab_05
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15788 C:\Users\ooust\Desktop\Cal Poly\5.Fall 2017\CPE 233\CPE-233\Lab_05\Lab_05.xpr
-# Log file: C:/Users/ooust/Desktop/Cal Poly/5.Fall 2017/CPE 233/CPE-233/Lab_05/vivado.log
-# Journal file: C:/Users/ooust/Desktop/Cal Poly/5.Fall 2017/CPE 233/CPE-233/Lab_05\vivado.jou
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Oct 27 14:48:32 2017
+# Process ID: 10796
+# Current directory: C:/Users/oousterm/Documents/GitHub/CPE-233/5 Register File/Lab_05
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5976 C:\Users\oousterm\Documents\GitHub\CPE-233\5 Register File\Lab_05\Lab_05.xpr
+# Log file: C:/Users/oousterm/Documents/GitHub/CPE-233/5 Register File/Lab_05/vivado.log
+# Journal file: C:/Users/oousterm/Documents/GitHub/CPE-233/5 Register File/Lab_05\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Users/ooust/Desktop/Cal Poly/5.Fall 2017/CPE 233/CPE-233/Lab_05/Lab_05.xpr}
-INFO: [Project 1-313] Project file moved from 'C:/Users/oousterm/Documents/GitHub/CPE-233/Lab_05' since last save.
+open_project {C:/Users/oousterm/Documents/GitHub/CPE-233/5 Register File/Lab_05/Lab_05.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/Users/ooust/Desktop/Cal Poly/5.Fall 2017/CPE 233/CPE-233/Lab_05' since last save.
 Scanning sources...
 Finished scanning sources
-INFO: [Project 1-230] Project 'Lab_05.xpr' upgraded for this version of Vivado.
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name CompiledLibDirXcelium
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name SimTypes
+WARNING: [Project 1-231] Project 'Lab_05.xpr' was created with a future version and may or may not perform reliably with this version of Vivado. It has been opened in read-only mode for the protection of unrecognized data. Use 'File | Save Project As...' if you wish to alter a copy of the project.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.3/data/ip'.
-open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 804.238 ; gain = 89.730
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
 update_compile_order -fileset sources_1
-exit
-INFO: [Common 17-206] Exiting Vivado at Mon Oct 16 07:23:23 2017...

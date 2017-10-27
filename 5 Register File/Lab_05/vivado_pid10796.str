@@ -1,0 +1,107 @@
+/*
+
+Vivado v2017.2 (64-bit)
+SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+
+Process ID: 10796
+License: Customer
+
+Current time: 	10/27/17 2:48:43 PM PDT
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 2
+Available disk space: 115 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2017.2/tps/win64/jre
+JVM executable location: 	C:/Xilinx/Vivado/2017.2/tps/win64/jre/bin/java.exe
+Java library paths: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o;C:/Windows/Sun/Java/bin;C:/Windows/system32;C:/Windows;C:/Xilinx/Vivado/2017.2/bin;C:/Xilinx/Vivado/2017.2/lib/win64.o;C:/Xilinx/Vivado/2017.2/tps/win64/jre/bin/server;C:/Xilinx/Vivado/2017.2/tps/win64/jre/bin;C:/Xilinx/SDK/2017.2/bin;C:/Xilinx/Vivado/2017.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2017.2/ids_lite/ISE/lib/nt64;C:/Xilinx/Vivado_HLS/2017.2/bin;C:/ProgramData/Oracle/Java/javapath;C:/Windows/system32;C:/Windows;C:/Windows/System32/Wbem;C:/Windows/System32/WindowsPowerShell/v1.0/;C:/MinGW/bin;c:/AVRDude/;C:/ProgramData/chocolatey/bin;C:/Program Files/MATLAB/R2016a/runtime/win64;C:/Program Files/MATLAB/R2016a/bin;C:/Program Files/Keysight/IO Libraries Suite/bin;C:/Program Files/IVI Foundation/VISA/Win64/ktvisa;C:/Program Files/IVI Foundation/VISA/Win64/bin;C:/Program Files (x86)/Keysight/IO Libraries Suite/bin;C:/Program Files (x86)/IVI Foundation/VISA/WinNT/ktvisa;C:/Program Files (x86)/IVI Foundation/VISA/WinNT/bin;C:/Program Files (x86)/IVI Foundation/IVI/bin;C:/Program Files/IVI Foundation/IVI/bin;C:/Program Files (x86)/IVI Foundation/VISA/winnt/agvisa;c:/Program Files (x86)/Microsoft SQL Server/110/Tools/Binn/;c:/Program Files/Microsoft SQL Server/110/Tools/Binn/;c:/Program Files/Microsoft SQL Server/110/DTS/Binn/;C:/Program Files/OpenSSH-Win64;C:/Program Files/Git/cmd;C:/Users/oousterm/AppData/Local/Microsoft/WindowsApps;C:/Users/oousterm/AppData/Local/GitHubDesktop/bin;C:/Xilinx/Vivado/2017.2/tps/mingw/6.2.0/win64.o/nt/bin;C:/Xilinx/Vivado/2017.2/tps/mingw/6.2.0/win64.o/nt/libexec/gcc/x86_64-w64-mingw32/6.2.0;.
+
+User name: 	oousterm
+User home directory: C:/Users/oousterm
+User working directory: C:/Users/oousterm/Documents/GitHub/CPE-233/5 Register File/Lab_05
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2017.2
+RDI_DATADIR: C:/Xilinx/Vivado/2017.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2017.2/bin
+
+User preferences location: C:/Users/oousterm/AppData/Roaming/Xilinx/Vivado
+Vivado preferences directory: C:/Users/oousterm/AppData/Roaming/Xilinx/Vivado/2017.2/vivado.xml
+Vivado layouts directory: C:/Users/oousterm/AppData/Roaming/Xilinx/Vivado/2017.2/layouts
+PlanAhead jar location: 	C:/Xilinx/Vivado/2017.2/lib/classes/planAhead.jar
+Vivado Look & Feel: 	[Synthetica - the extended Synth Look and Feel. - ui.g.i.H]
+Engine tmp dir: 	C:/Users/oousterm/Documents/GitHub/CPE-233/5 Register File/Lab_05/.Xil/Vivado-10796-RM100B6
+
+GUI allocated memory:	181 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 470 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// HOptionPane Warning: 'This project was created with a future version of Vivado. It will be opened in read-only mode for the protection of unrecognized data. Please use 'File | Save Project As...' if you need to alter a copy of this project. The project may or may not open reliably with this version of Vivado. OK to proceed and open the project? (Future Project Version)'
+// [GUI Memory]: 63 MB (+63663kb) [00:00:06]
+// [Engine Memory]: 467 MB (+338610kb) [00:00:06]
+// HMemoryUtils.trashcanNow. Engine heap size: 486 MB. GUI used memory: 34 MB. Current time: 10/27/17 2:48:45 PM PDT
+// bs:g (cg:JFrame):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\oousterm\Documents\GitHub\CPE-233\5 Register File\Lab_05\Lab_05.xpr. Version: Vivado v2017.3 
+selectButton("PAResourceOtoP.PABaseTab_THIS_PROJECT_WILL_BE_OPENED_IN_READ_ONLY_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, G:JDialog)
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 516 MB (+26014kb) [00:01:04]
+// [Engine Memory]: 558 MB (+17211kb) [00:01:05]
+// Tcl Message: open_project {C:/Users/oousterm/Documents/GitHub/CPE-233/5 Register File/Lab_05/Lab_05.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/ooust/Desktop/Cal Poly/5.Fall 2017/CPE 233/CPE-233/Lab_05' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 579 MB. GUI used memory: 42 MB. Current time: 10/27/17 2:49:42 PM PDT
+// Project name: Lab_05; location: C:/Users/oousterm/Documents/GitHub/CPE-233/5 Register File/Lab_05; part: xc7a50tcsg324-1
+// [Engine Memory]: 587 MB (+1420kb) [00:01:07]
+dismissDialog("Open Project"); // bs:g (cg:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// z:x (cg:JFrame): Project is Read-Only: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+// a:a (cg:JFrame): Critical Messages: addNotify
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, z:x)
+dismissDialog("Project is Read-Only"); // z:x (cg:JFrame)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f:a (JPanel:JComponent, a:a)
+dismissDialog("Critical Messages"); // a:a (cg:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Lab_5_Main(Behavioral) (Lab_5_Main.vhd)]", 1); // B:i (D:JPanel, cg:JFrame)
+// PAPropertyPanels.initPanels (Mux_4x1.vhd) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Lab_5_Main(Behavioral) (Lab_5_Main.vhd), MUX_0 : MUX_4x1(Behavioral) (Mux_4x1.vhd)]", 7, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Lab_5_Main(Behavioral) (Lab_5_Main.vhd), MUX_0 : MUX_4x1(Behavioral) (Mux_4x1.vhd)]", 7, false, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click
+selectCodeEditor("Mux_4x1.vhd", 161, 212); // C:bI (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "Mux_4x1.vhd", 'c'); // C:bI (JPanel:JComponent, cg:JFrame)
+// [GUI Memory]: 69 MB (+2533kb) [00:01:17]
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Lab_5_Main(Behavioral) (Lab_5_Main.vhd), RAM : Dual_Port_Ram(Behavioral) (Dual_Port_Ram.vhd)]", 8, false); // B:i (D:JPanel, cg:JFrame)
+// [GUI Memory]: 75 MB (+3106kb) [00:01:26]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Lab_5_Main(Behavioral) (Lab_5_Main.vhd), MUX_1 : MUX_2x1(Behavioral) (Mux_2x1.vhd)]", 6, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Lab_5_Main(Behavioral) (Lab_5_Main.vhd), MUX_1 : MUX_2x1(Behavioral) (Mux_2x1.vhd)]", 6, false, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click
+selectCodeEditor("Mux_2x1.vhd", 312, 203); // C:bI (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "Mux_2x1.vhd", 'c'); // C:bI (JPanel:JComponent, cg:JFrame)
+// [GUI Memory]: 79 MB (+639kb) [00:02:41]
+// [GUI Memory]: 84 MB (+26kb) [00:07:51]
+// [GUI Memory]: 89 MB (+899kb) [00:13:55]
+// HMemoryUtils.trashcanNow. Engine heap size: 599 MB. GUI used memory: 44 MB. Current time: 10/27/17 3:19:45 PM PDT
+// [GUI Memory]: 93 MB (+479kb) [00:48:57]

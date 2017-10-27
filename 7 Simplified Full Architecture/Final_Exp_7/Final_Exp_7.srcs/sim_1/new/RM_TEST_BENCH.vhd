@@ -29,7 +29,7 @@ architecture tb of tb_RAT_wrapper is
     signal RESET    : std_logic;
     signal CLK      : std_logic;
 
-    constant TbPeriod : time := 100 ns; -- EDIT Put right period here
+    constant TbPeriod : time := 2 ns; -- EDIT Put right period here
     signal TbClock : std_logic := '0';
     signal TbSimEnded : std_logic := '0';
 
@@ -56,38 +56,31 @@ begin
         SWITCHES <= (others => '0');
         BUTTONS <= (others => '0');
 
-        -- Reset generation
-        -- EDIT: Check that RESET is really your reset signal
-        RESET <= '1';
-        wait for 100 ns;
-        RESET <= '0';
-        wait for 100 ns;
-
         -- EDIT Add stimuli here       --what it should output
         SWITCHES <= x"0000";            --all lights
         BUTTONS <= "0000";
         RESET <= '0';
-        wait for 100 * TbPeriod;
+        wait for 50 * TbPeriod;
         
         SWITCHES <= x"0002";             --1
         BUTTONS <= "0000";
         RESET <= '0';
-        wait for 100 * TbPeriod;
+        wait for 50 * TbPeriod;
                 
         SWITCHES <= x"0003";             --2
         BUTTONS <= "0000";
         RESET <= '0';
-        wait for 100 * TbPeriod;
+        wait for 50 * TbPeriod;
                 
         SWITCHES <= x"00C9";             --C8
         BUTTONS <= "0000";
         RESET <= '0';
-        wait for 100 * TbPeriod;
+        wait for 50 * TbPeriod;
         
         SWITCHES <= x"000A";             --9
         BUTTONS <= "0000";
         RESET <= '0';
-        wait for 100 * TbPeriod;
+        wait for 50 * TbPeriod;
 
         -- Stop the clock and hence terminate the simulation
         TbSimEnded <= '1';

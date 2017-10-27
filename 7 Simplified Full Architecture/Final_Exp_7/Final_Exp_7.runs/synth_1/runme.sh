@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/oousterm/Documents/GitHub/CPE-233/Final_Exp_7/Final_Exp_7.runs/synth_1'
+HD_PWD='C:/Users/oousterm/Documents/GitHub/CPE-233/7 Simplified Full Architecture/Final_Exp_7/Final_Exp_7.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

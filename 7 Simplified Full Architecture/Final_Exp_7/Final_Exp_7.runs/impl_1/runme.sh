@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/oousterm/Documents/GitHub/CPE-233/Final_Exp_7/Final_Exp_7.runs/impl_1'
+HD_PWD='C:/Users/oousterm/Documents/GitHub/CPE-233/7 Simplified Full Architecture/Final_Exp_7/Final_Exp_7.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
+/bin/touch .init_design.begin.rst
 EAStep vivado -log RAT_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source RAT_wrapper.tcl -notrace
 
 

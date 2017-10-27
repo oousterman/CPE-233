@@ -7,23 +7,24 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/oousterm/Documents/GitHub/CPE-233/Final_Exp_7/Final_Exp_7.cache/wt [current_project]
-set_property parent.project_path C:/Users/oousterm/Documents/GitHub/CPE-233/Final_Exp_7/Final_Exp_7.xpr [current_project]
+set_property webtalk.parent_dir {C:/Users/oousterm/Documents/GitHub/CPE-233/7 Simplified Full Architecture/Final_Exp_7/Final_Exp_7.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/oousterm/Documents/GitHub/CPE-233/7 Simplified Full Architecture/Final_Exp_7/Final_Exp_7.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+set_property ip_output_repo {c:/Users/oousterm/Documents/GitHub/CPE-233/7 Simplified Full Architecture/Final_Exp_7/Final_Exp_7.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  C:/Users/oousterm/Documents/GitHub/CPE-233/Exp_7/ALU.vhd
-  C:/Users/oousterm/Documents/GitHub/CPE-233/Final_Exp_7/Final_Exp_7.srcs/sources_1/new/CONTROL_UNIT.vhd
-  C:/Users/oousterm/Documents/GitHub/CPE-233/Final_Exp_7/Final_Exp_7.srcs/sources_1/new/FlagReg.vhd
-  C:/Users/oousterm/Documents/GitHub/CPE-233/Lab_05/Lab_05.srcs/sources_1/new/Mux_2x1.vhd
-  C:/Users/oousterm/Documents/GitHub/CPE-233/Lab_05/Lab_05.srcs/sources_1/new/Mux_4x1.vhd
-  C:/Users/oousterm/Documents/GitHub/CPE-233/Final_Exp_7/Final_Exp_7.srcs/sources_1/new/PC.vhd
-  C:/Users/oousterm/Documents/GitHub/CPE-233/Final_Exp_7/Final_Exp_7.srcs/sources_1/new/RAT_MCU.vhd
-  C:/Users/oousterm/Documents/GitHub/CPE-233/Final_Exp_7/Final_Exp_7.srcs/sources_1/new/RegisterFile.vhd
-  C:/Users/oousterm/Documents/GitHub/CPE-233/Final_Exp_7/Final_Exp_7.srcs/sources_1/new/clk_div2_buf.vhd
-  C:/Users/oousterm/Documents/GitHub/CPE-233/Exp_7/prog_rom.vhd
-  C:/Users/oousterm/Documents/GitHub/CPE-233/Final_Exp_7/Final_Exp_7.srcs/sources_1/new/RAT_wrapper.vhd
+  {C:/Users/oousterm/Documents/GitHub/CPE-233/7 Simplified Full Architecture/Exp_7/ALU.vhd}
+  {C:/Users/oousterm/Documents/GitHub/CPE-233/7 Simplified Full Architecture/Final_Exp_7/Final_Exp_7.srcs/sources_1/new/CONTROL_UNIT.vhd}
+  {C:/Users/oousterm/Documents/GitHub/CPE-233/7 Simplified Full Architecture/Final_Exp_7/Final_Exp_7.srcs/sources_1/new/FlagReg.vhd}
+  {C:/Users/oousterm/Documents/GitHub/CPE-233/7 Simplified Full Architecture/Final_Exp_7/Final_Exp_7.srcs/sources_1/new/MUX_2x1.vhd}
+  {C:/Users/oousterm/Documents/GitHub/CPE-233/7 Simplified Full Architecture/Final_Exp_7/Final_Exp_7.srcs/sources_1/new/MUX_4x1.vhd}
+  {C:/Users/oousterm/Documents/GitHub/CPE-233/7 Simplified Full Architecture/Final_Exp_7/Final_Exp_7.srcs/sources_1/new/PC.vhd}
+  {C:/Users/oousterm/Documents/GitHub/CPE-233/7 Simplified Full Architecture/Final_Exp_7/Final_Exp_7.srcs/sources_1/new/RAT_MCU.vhd}
+  {C:/Users/oousterm/Documents/GitHub/CPE-233/7 Simplified Full Architecture/Final_Exp_7/Final_Exp_7.srcs/sources_1/new/RegisterFile.vhd}
+  {C:/Users/oousterm/Documents/GitHub/CPE-233/7 Simplified Full Architecture/Final_Exp_7/Final_Exp_7.srcs/sources_1/new/clk_div2_buf.vhd}
+  {C:/Users/oousterm/Documents/GitHub/CPE-233/7 Simplified Full Architecture/Exp_7/prog_rom.vhd}
+  {C:/Users/oousterm/Documents/GitHub/CPE-233/7 Simplified Full Architecture/Final_Exp_7/Final_Exp_7.srcs/sources_1/new/RAT_wrapper.vhd}
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -33,8 +34,8 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/oousterm/Documents/GitHub/CPE-233/Final_Exp_7/Final_Exp_7.srcs/constrs_1/new/EXP_7_Constraints.xdc
-set_property used_in_implementation false [get_files C:/Users/oousterm/Documents/GitHub/CPE-233/Final_Exp_7/Final_Exp_7.srcs/constrs_1/new/EXP_7_Constraints.xdc]
+read_xdc {{C:/Users/oousterm/Documents/GitHub/CPE-233/7 Simplified Full Architecture/Final_Exp_7/Final_Exp_7.srcs/constrs_1/new/EXP_7_Constraints.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/oousterm/Documents/GitHub/CPE-233/7 Simplified Full Architecture/Final_Exp_7/Final_Exp_7.srcs/constrs_1/new/EXP_7_Constraints.xdc}}]
 
 
 synth_design -top RAT_wrapper -part xc7a35tcpg236-1
