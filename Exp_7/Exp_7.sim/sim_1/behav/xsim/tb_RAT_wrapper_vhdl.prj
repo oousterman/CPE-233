@@ -1,0 +1,17 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../ALU.vhd" \
+"../../../../Exp_7.srcs/sources_1/new/CONTROL_UNIT.vhd" \
+"../../../../Exp_7.srcs/sources_1/new/FlagReg.vhd" \
+"../../../../../Lab_05/Lab_05.srcs/sources_1/new/Mux_2x1.vhd" \
+"../../../../../Lab_05/Lab_05.srcs/sources_1/new/Mux_4x1.vhd" \
+"../../../../Exp_7.srcs/sources_1/new/PC.vhd" \
+"../../../../Exp_7.srcs/sources_1/new/RAT_MCU.vhd" \
+"../../../../Exp_7.srcs/sources_1/new/RAT_wrapper.vhd" \
+"../../../../Exp_7.srcs/sources_1/new/RegisterFile.vhd" \
+"../../../../Exp_7.srcs/sources_1/new/clk_div2_buf.vhd" \
+"../../../../../prog_rom.vhd" \
+"../../../../Exp_7.srcs/sim_1/new/RM_TEST_BENCH.vhd" \
+
+# Do not sort compile order
+nosort

@@ -19,6 +19,7 @@ architecture tb of tb_RAT_wrapper is
               RESET    : in std_logic;
               CLK      : in std_logic);
     end component;
+    
 
     signal LEDS     : std_logic_vector (15 downto 0);
     signal SEGMENTS : std_logic_vector (7 downto 0);
@@ -28,7 +29,7 @@ architecture tb of tb_RAT_wrapper is
     signal RESET    : std_logic;
     signal CLK      : std_logic;
 
-    constant TbPeriod : time := 1000 ns; -- EDIT Put right period here
+    constant TbPeriod : time := 100 ns; -- EDIT Put right period here
     signal TbClock : std_logic := '0';
     signal TbSimEnded : std_logic := '0';
 

@@ -282,7 +282,7 @@ begin
               sel   => S_ALU_OPY_SEL,
               res   => S_ALU_MUX);
               
-   PORT_ID  <= S_INST_REG(7 downto 0);
+   PORT_ID  <= X"20";
    OUT_PORT <= S_RF_DX_OUT;
    
           
