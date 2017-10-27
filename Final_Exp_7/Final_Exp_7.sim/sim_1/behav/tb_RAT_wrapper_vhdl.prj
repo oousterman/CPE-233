@@ -1,0 +1,16 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../../Exp_7/ALU.vhd"
+vhdl xil_defaultlib  "../../../Final_Exp_7.srcs/sources_1/new/CONTROL_UNIT.vhd"
+vhdl xil_defaultlib  "../../../Final_Exp_7.srcs/sources_1/new/FlagReg.vhd"
+vhdl xil_defaultlib  "../../../../Lab_05/Lab_05.srcs/sources_1/new/Mux_2x1.vhd"
+vhdl xil_defaultlib  "../../../../Lab_05/Lab_05.srcs/sources_1/new/Mux_4x1.vhd"
+vhdl xil_defaultlib  "../../../Final_Exp_7.srcs/sources_1/new/PC.vhd"
+vhdl xil_defaultlib  "../../../Final_Exp_7.srcs/sources_1/new/RAT_MCU.vhd"
+vhdl xil_defaultlib  "../../../Final_Exp_7.srcs/sources_1/new/RAT_wrapper.vhd"
+vhdl xil_defaultlib  "../../../Final_Exp_7.srcs/sources_1/new/RegisterFile.vhd"
+vhdl xil_defaultlib  "../../../Final_Exp_7.srcs/sources_1/new/clk_div2_buf.vhd"
+vhdl xil_defaultlib  "../../../../Exp_7/prog_rom.vhd"
+vhdl xil_defaultlib  "../../../Final_Exp_7.srcs/sim_1/new/RM_TEST_BENCH.vhd"
+
+# Do not sort compile order
+nosort
